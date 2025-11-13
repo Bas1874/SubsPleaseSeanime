@@ -113,8 +113,8 @@ class Provider {
                 date: date,
                 size: sizeInBytes,
                 formattedSize: sizeInBytes > 0 ? `${(sizeInBytes / (1024 * 1024)).toFixed(2)} MB` : "N/A",
-                seeders: 0,
-                leechers: 0,
+                seeders: -1,
+                leechers: -1,
                 downloadCount: 0,
                 link: `https://subsplease.org/shows/${release.page}/`,
                 downloadUrl: "",
@@ -124,7 +124,7 @@ class Provider {
                 isBatch: false,
                 episodeNumber: isNaN(episodeNumber) ? -1 : episodeNumber,
                 releaseGroup: "SubsPlease",
-                isBestRelease: true,
+                isBestRelease: false,
                 confirmed: true,
             });
         }
